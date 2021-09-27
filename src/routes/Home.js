@@ -27,14 +27,15 @@ class Home extends React.Component {
     const { isLoading, movies } = this.state;
 
     return (
-      <section class="container">
+      <section className="container">
         {isLoading ? (
           "Loading..."
         ) : (
-          <div class="movies">
+          <div className="movies">
             {movies.map((movie) => (
               <Movie
                 key={movie.id}
+                id={movie.id}
                 title={movie.title}
                 year={movie.year}
                 summary={movie.summary}
